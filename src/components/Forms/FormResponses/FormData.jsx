@@ -4,7 +4,7 @@ import { JobsCardSection, JobsDetailContainer, JobsDetailSection } from "./Jobs/
 import Job from "./Jobs/Job";
 import JobDetailsPage from "./Jobs/JobDetailsPage";
 import { useSelector } from "react-redux";
-import { Wrapper } from "../Profile/ProfileElements";
+import { Wrapper } from "../../Dashboard/Profile/ProfileElements";
 import { NotFound } from "../../index";
 import { getApiUrl } from "../../../features/apiUrl";
 

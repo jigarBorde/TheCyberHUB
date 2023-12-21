@@ -25,13 +25,13 @@ import {
 import { Container } from "./components/Other/MixComponents/Layout/LayoutElements";
 import Spinner from "./components/Other/MixComponents/Spinner/Spinner";
 // import { useSelector } from "react-redux";
-import ContactForm from "./components/Homepage/ContactForm/ContactForm";
+import ContactForm from "./components/Forms/ContactForm/ContactForm";
 import TermsAndCondition from "./components/Resources/TermsAndCondition";
 import PrivacyPolicy from "./components/Resources/PrivacyPolicy";
-import FormData from "./components/Dashboard/FormData/FormData";
+import FormData from "./components/Forms/FormResponses/FormData";
 import UserProfile from "./components/Dashboard/Profile/UserProfile";
 // import UserTimestamps from "./features/UserTimestamps";
-import InternshipResponse from "./components/Dashboard/FormData/InternshipResponse";
+import InternshipResponse from "./components/Forms/FormResponses/InternshipResponse";
 import EditPublicProfile from "./components/Dashboard/Profile/EditPublicProfile/EditPublicProfile";
 import Volunteer from "./components/Opportunities/Volunteer/Volunteer";
 import TimeLineEvent from "./components/Opportunities/TimeLineEvent/TimeLineEvent";

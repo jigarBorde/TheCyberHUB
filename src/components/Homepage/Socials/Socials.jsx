@@ -20,11 +20,10 @@ import {
     FaInstagram,
     FaLinkedinIn,
     FaTelegramPlane,
-    FaTwitter,
     FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { H1 } from "../ContactForm/ContactFormElements";
+import { H1 } from "../../Forms/ContactForm/ContactFormElements";
 
 const Socials = () => {
     return (

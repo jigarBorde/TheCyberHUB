@@ -1,5 +1,5 @@
 import React from "react";
-import { H1 } from "../ContactForm/ContactFormElements";
+import { H1 } from "../../Forms/ContactForm/ContactFormElements";
 // import tailwind from "../../../assets/images/tailwind.svg";
 import {
     SponsorsWrapper,

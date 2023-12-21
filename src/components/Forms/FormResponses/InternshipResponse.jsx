@@ -4,7 +4,7 @@ import { JobsCardSection, JobsDetailContainer, JobsDetailSection } from "./Jobs/
 import Job from "./Jobs/Job";
 import JobDetailsPage from "./Jobs/JobDetailsPage";
 import { useSelector } from "react-redux";
-import { Wrapper } from "../Profile/ProfileElements";
+import { Wrapper } from "../../Dashboard/Profile/ProfileElements";
 import { NotFound } from "../../index";
 import { getApiUrl } from "../../../features/apiUrl";
 import {
@@ -17,6 +17,7 @@ import {
 
 const InternshipResponse = () => {
     const { user } = useSelector((state) => state.auth);
+
     if (!user) {
         return <NotFound />;
     }
@@ -33,7 +34,6 @@ const InternshipResponse = () => {
     useEffect(() => {
         setIsLoading(true);
         const token = JSON.parse(localStorage.getItem("user")).token;
-        // https://api.thecyberhub.org
         fetch(getApiUrl("api/form/getFormData"), {
             method: "GET",
             headers: {
@@ -44,7 +44,7 @@ const InternshipResponse = () => {
             .then((res) => res.json())
             .then((data) => {
                 setFormData(data);
-                if (data === "User not authorized") {
+                if (data === "Unauthorized or invalid token") {
                     setIsAuthorised(false);
                 } else {
                     setIsAuthorised(true);
@@ -85,10 +85,6 @@ const InternshipResponse = () => {
     const filteredFormData = selectedReasonType
         ? filteredData.filter((data) => data.reasonType === selectedReasonType)
         : filteredData;
-
-    console.log("isAuthorised:", isAuthorised);
-    console.log("isLoading:", isLoading);
-    console.log("formData:", formData);
 
     if (!isAuthorised || isLoading || formData === null) {
         return <NotFound />;
